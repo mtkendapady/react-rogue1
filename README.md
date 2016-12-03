@@ -75,6 +75,7 @@ Import react and create a class called App. Render this inside
 ```
 
 Your code should look something like this:
+
 `src/components/App/App.js`
 ```js
 import React from "react";
@@ -95,9 +96,10 @@ export default class App extends React.Component {
 ```
 
 Let's setup our routes:
+
 Inside `index.js` import react, react-dom, `App` component, and your custom css stylesheet.
 
-`src/index.js`
+`./src/index.js`
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -116,7 +118,7 @@ Render a router onto the div with the id of `react-node`. The router should:
 
 Your code should look something like this:
 
-`src/index.js`
+`./src/index.js`
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -141,7 +143,7 @@ document.addEventListener( "DOMContentLoaded", () => {
 
 Create a new components at:
 
-- `components/Character/Character.js`
+- `./components/Character/Character.js`
 
 Now here comes the power of react-router
 
@@ -149,7 +151,7 @@ Now here comes the power of react-router
 
 Your code should look something like this:
 
-`components/Character/Character.js`
+`./components/Character/Character.js`
 ```js
 import React from "react";
 
@@ -167,7 +169,7 @@ export default class Character extends React.Component {
 
 Your code should look something like this:
 
-`src/index.js`
+`./src/index.js`
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
@@ -239,6 +241,7 @@ Our router is now set up and ready for use, we just need to configure each indiv
   * Invoked immediately before a component is unmounted from the DOM.
 Perform any necessary cleanup in this method, clean up any DOM elements that were created in componentDidMount.
 
+Check out this link for a awesome diagram:
 [React components lifecycle diagram](https://codepen.io/eduardoboucas/pen/jqWbdb).
 
 Our `Character` component will display individual characters provided by `swapiService`.
