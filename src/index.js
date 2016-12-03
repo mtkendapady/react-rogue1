@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Route, browserHistory } from "react-router";
+
+import App from "./components/App/App";
+import Character from "./components/Character/Character"
 
 import "./css/styles.css"
 
@@ -8,7 +12,10 @@ document.addEventListener( "DOMContentLoaded", () => {
 
     if ( reactNode ) {
         ReactDOM.render(
-            <h1>Hello from index.js!</h1>
-            , reactNode )
+					<Router history={ browserHistory }>
+						<Route path="/" component={ App }/>
+						<Route path="/characters/:id" component={ Character }/>
+					</Router> ,
+            reactNode )
     }
 } );
